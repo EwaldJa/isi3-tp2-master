@@ -32,7 +32,7 @@ partie droite du noeud et le noeud est scruté en dernier. Le parcours postfixe 
 
 
 
-Complétez le code du [package exerciceVisiteur1](src/exerciceVisiteur1/) de sorte à pouvoir calculer la valeur d'une expression arithmétique et de l'afficher selon un affichage postfixe. 
+Complétez le code du [package exerciceVisiteur1](../src/exerciceVisiteur1/) de sorte à pouvoir calculer la valeur d'une expression arithmétique et de l'afficher selon un affichage postfixe. 
 
 Vous pouvez tester votre code avec la classe [classe TestArbreBinaire](src/exerciceVisiteur1/TestArbreBinaire.java) 
 
@@ -56,7 +56,7 @@ En particulier, une interface **Visiteur** permettra de visiter tous les éléme
 
 #### Question 4
 
-Complétez le code du package [package exerciceVisiteur2](src/exerciceVisiteur2/) avec les modifications proposées à la question précédente.
+Complétez le code du package [package exerciceVisiteur2](../src/exerciceVisiteur2/) avec les modifications proposées à la question précédente.
 
 L’objectif est maintenant de définir différents Visiteurs. **Vous ne devez normalement plus toucher au code de l’arbre binaire.**
 
