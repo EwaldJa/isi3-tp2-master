@@ -10,16 +10,9 @@ public class VendingMachine {
 
     public static String showAllCoffees() {
         int coffeesNb = 1;
-        StringBuffer sb = new StringBuffer();
-        sb.append("Available coffees : \n");
-        for(String coffee:coffees.keySet()) {
-            sb.append("  -");
-            sb.append(coffeesNb++);
-            sb.append("- ");
-            sb.append(coffee);
-            sb.append(" : ");
-            sb.append(coffees.get(coffee));
-            sb.append("€\n");
+        StringBuffer sb = new StringBuffer().append("Available coffees : \n");
+        for(String coffee: coffees.keySet()) {
+            sb.append("  -").append(coffeesNb++).append("- ").append(coffee).append(" : ").append(coffees.get(coffee)).append("€\n");
         }
         return sb.toString();
     }
