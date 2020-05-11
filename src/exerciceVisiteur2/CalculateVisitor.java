@@ -10,30 +10,22 @@ public class CalculateVisitor extends Visitor {
 	}
 
 	public void visit(Negation element){
-		CalculateVisitor tempVisitor = new CalculateVisitor();
-		element.getOpG().accept(tempVisitor);
-		int opG_value = tempVisitor.result;
-		this.result = - opG_value;
+		element.getOpG().accept(this);
+		this.result = - this.result;
 	}
 
 	public void visit(Addition element){
-		CalculateVisitor tempVisitor = new CalculateVisitor();
-		element.getOpG().accept(tempVisitor);
-		int opG_value = tempVisitor.result;
-		tempVisitor.result = 0;
-		element.getOpD().accept(tempVisitor);
-		int opD_value = tempVisitor.result;
-		this.result = opG_value + opD_value;
+		element.getOpG().accept(this);
+		int opG_value = this.result;
+		element.getOpD().accept(this);
+		this.result += opG_value;
 	}
 
 	public void visit(Multiplication element){
-		CalculateVisitor tempVisitor = new CalculateVisitor();
-		element.getOpG().accept(tempVisitor);
-		int opG_value = tempVisitor.result;
-		tempVisitor.result = 0;
-		element.getOpD().accept(tempVisitor);
-		int opD_value = tempVisitor.result;
-		this.result = opG_value * opD_value;
+		element.getOpG().accept(this);
+		int opG_value = this.result;
+		element.getOpD().accept(this);
+		this.result *= opG_value;
 	}
 
 	public int getResult() {

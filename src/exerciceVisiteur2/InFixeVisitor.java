@@ -13,24 +13,20 @@ public class InFixeVisitor extends Visitor {
 
 	public void visit(Negation element){
 		sb.append("(-");
-		InFixeVisitor tempVisitor = new InFixeVisitor();
-		tempVisitor.parentisHighPriority = element.isHighPriority();
-		element.getOpG().accept(tempVisitor);
-		sb.append(tempVisitor).append(")");
+		this.parentisHighPriority = element.isHighPriority();
+		element.getOpG().accept(this);
+		sb.append(")");
 	}
 
 	public void visit(Addition element){
 		boolean needsParenthesis = (parentisHighPriority && !element.isHighPriority());
 		if (needsParenthesis) {
 			sb.append("("); }
-		InFixeVisitor tempVisitor = new InFixeVisitor();
-		tempVisitor.parentisHighPriority = element.isHighPriority();
-		element.getOpG().accept(tempVisitor);
-		sb.append(tempVisitor).append(element.getOp());
-		tempVisitor = new InFixeVisitor();
-		tempVisitor.parentisHighPriority = element.isHighPriority();
-		element.getOpD().accept(tempVisitor);
-		sb.append(tempVisitor);
+		this.parentisHighPriority = element.isHighPriority();
+		element.getOpG().accept(this);
+		sb.append(element.getOp());
+		this.parentisHighPriority = element.isHighPriority();
+		element.getOpD().accept(this);
 		if (needsParenthesis) {
 			sb.append(")"); }
 	}
@@ -39,14 +35,11 @@ public class InFixeVisitor extends Visitor {
 		boolean needsParenthesis = (parentisHighPriority && !element.isHighPriority());
 		if (needsParenthesis) {
 			sb.append("("); }
-		InFixeVisitor tempVisitor = new InFixeVisitor();
-		tempVisitor.parentisHighPriority = element.isHighPriority();
-		element.getOpG().accept(tempVisitor);
-		sb.append(tempVisitor).append(element.getOp());
-		tempVisitor = new InFixeVisitor();
-		tempVisitor.parentisHighPriority = element.isHighPriority();
-		element.getOpD().accept(tempVisitor);
-		sb.append(tempVisitor);
+		this.parentisHighPriority = element.isHighPriority();
+		element.getOpG().accept(this);
+		sb.append(element.getOp());
+		this.parentisHighPriority = element.isHighPriority();
+		element.getOpD().accept(this);
 		if (needsParenthesis) {
 			sb.append(")"); }
 	}
