@@ -14,8 +14,9 @@ public abstract class OperateurBinaire  extends OperateurUnaire{
 	}
 	
 	public void affichagePostfixe() {
-				
-		
+		getOpG().affichagePostfixe();
+		getOpD().affichagePostfixe();
+		System.out.print(getOp());
 	}
 
 }

@@ -7,7 +7,7 @@ public class Multiplication extends OperateurBinaire{
 	}
 	@Override
 	public int calculer() {
-		return 0;
+		return getOpG().calculer() * getOpD().calculer();
 	}
 	
 

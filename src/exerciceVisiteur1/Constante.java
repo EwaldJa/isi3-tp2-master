@@ -8,11 +8,11 @@ public class Constante implements Noeud{
 	public int getValeur(){return valeur;}
 	
 	public void affichagePostfixe() {
-		;
+		System.out.print(getValeur());
 	}
 	
 	public int calculer() {
-		return 0;
+		return getValeur();
 	}
 
 

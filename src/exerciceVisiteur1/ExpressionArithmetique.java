@@ -13,12 +13,13 @@ public class ExpressionArithmetique {
 
 	public void affichagePostfixe() {
 		System.out.println("\n postfixe:");
+		racine.affichagePostfixe();
 
 		
 	}
 
 	public int calculerValeur() {
-		return 0;
+		return racine.calculer();
 	}
 
 
