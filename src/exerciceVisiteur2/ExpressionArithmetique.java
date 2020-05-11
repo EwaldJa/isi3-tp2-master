@@ -13,12 +13,15 @@ public class ExpressionArithmetique {
 	}
 
 	public void afficherPostFixe() {
-		System.out.println("\n postfixe:");
-		
+		PostFixeVisitor v = new PostFixeVisitor();
+		racine.accept(v);
+		System.out.println("\n postfixe: " + v);
 	}
 
 	public int calculerValeur() {
-		return 0;
+		CalculateVisitor visitor = new CalculateVisitor();
+		racine.accept(visitor);
+		return visitor.getResult();
 	}
 
 	

@@ -7,6 +7,8 @@ public class Multiplication extends OperateurBinaire{
 		super("*", ng, nd);
 	}
 
-
-
+	@Override
+	public void accept(Visitor v) {
+		v.visit(this);
+	}
 }
