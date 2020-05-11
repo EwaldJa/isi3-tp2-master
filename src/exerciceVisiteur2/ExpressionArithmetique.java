@@ -26,8 +26,9 @@ public class ExpressionArithmetique {
 
 	
 	public void afficherInFixe() {
-		System.out.println("\n infixe:");
-		
+		InFixeVisitor v = new InFixeVisitor();
+		racine.accept(v);
+		System.out.println("\n infixe: " + v);
 	}
 	
 }

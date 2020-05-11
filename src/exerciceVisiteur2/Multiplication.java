@@ -11,4 +11,9 @@ public class Multiplication extends OperateurBinaire{
 	public void accept(Visitor v) {
 		v.visit(this);
 	}
+
+	@Override
+	public boolean isHighPriority() {
+		return true;
+	}
 }

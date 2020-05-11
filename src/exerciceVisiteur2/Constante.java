@@ -15,4 +15,9 @@ public class Constante implements Noeud{
 		v.visit(this);
 	}
 
+	@Override
+	public boolean isHighPriority() {
+		return false;
+	}
+
 }

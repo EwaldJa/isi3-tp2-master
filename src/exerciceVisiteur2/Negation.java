@@ -12,4 +12,9 @@ public class Negation extends OperateurUnaire{
 		v.visit(this);
 	}
 
+	@Override
+	public boolean isHighPriority() {
+		return false;
+	}
+
 }

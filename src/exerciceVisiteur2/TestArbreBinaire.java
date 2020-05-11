@@ -13,7 +13,7 @@ public class TestArbreBinaire {
 		ExpressionArithmetique exp = new ExpressionArithmetique(racine);
 
 		exp.afficherInFixe();
-		System.out.println("Attendu : 1+2×3+(−4)");
+		System.out.println("Attendu : 1+2*3+(−4)");
 		System.out.println("\n calcul valeur: " + exp.calculerValeur());
 		System.out.println("Attendu : 3");
 		exp.afficherPostFixe();
