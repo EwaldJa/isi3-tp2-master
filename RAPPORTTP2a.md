@@ -1,4 +1,4 @@
-**Nom/Prénom Etudiant 1 : Janin Ewald**
+**Nom/Prénom Etudiant : Janin Ewald**
 
 
 
@@ -25,10 +25,9 @@ L'ajout de nouveaux éléments dans cette architecture est très simple, il suff
 
 Il faudrait cloisonner mieux les différents types d'objets, et permettre d'avoir des fonctionnalités différentes pour chacun d'entre eux, c'est ce que nous allons voir tout de suite avec le _design pattern Decorateur_.
 
+
+
 ### Itération 3
-*présentez votre solution en donnant le diagramme de classes et en expliquant comment vous avez appliqué de design pattern Decorateur*
-*discutez la facilité d’ajouter de nouveaux éléments (boissons et suppléments) *
-*conclusion(s) ?*
 
 Dans cette partie, j'ai repris en partie le design de la partie d'avant : la classe `Main` sert toujours à afficher les infos au client et à récupérer sa saisie, et la classe `VendingMachine` sert toujours à lister les choix possibles et à faire le processing de la commande du client.
 
