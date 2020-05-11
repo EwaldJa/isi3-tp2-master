@@ -33,7 +33,7 @@ public class VendingMachine {
     }
 
 
-    public static String getCoffeeChoice(int coffeeNb, ArrayList<Extra> extras) {
+    public static String getCoffeeChoice(int coffeeNb, List<Extra> extras) {
         if ((coffeeNb < 1) || (coffeeNb > available_coffees.size())) {
             return "No such coffee : " + coffeeNb;
         }
